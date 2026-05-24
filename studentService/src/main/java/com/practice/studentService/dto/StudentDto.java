@@ -11,7 +11,15 @@ import lombok.Setter;
 public class StudentDto {
     private String name;
 
-    public StudentDto(String name){
+    private AddressDto address;
+
+
+    public StudentDto(String name) {
         this.name = name;
+    }
+
+    public StudentDto(String name, AddressDto address){
+        this.name = name;
+        this.address = address;
     }
 }
