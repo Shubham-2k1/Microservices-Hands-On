@@ -6,7 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(url="${address-service-url}", value = "address-feign-client")
+//@FeignClient(url="${address-service-url}", value = "address-feign-client")
+@FeignClient(value="address-service", path="/address")
 public interface addressFeignClient {
 
     @PostMapping("/getAddressByName")
